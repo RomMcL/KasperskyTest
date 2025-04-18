@@ -11,10 +11,10 @@ import './styles/global/index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter >
-        <Provider store={store}>              
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <Provider store={store}>
             <App />
         </Provider>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );

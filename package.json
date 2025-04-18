@@ -1,18 +1,29 @@
 {
+  "homepage": "https://rommcl.github.io/KasperskyTest/",
   "name": "package.json",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": "./dist/main.js",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "vitest run && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@reduxjs/toolkit": "^2.6.1",
     "antd": "^5.24.7",
+    "gh-pages": "^6.3.0",
     "highcharts": "^12.2.0",
     "highcharts-react-official": "^3.2.1",
     "react": "^19.0.0",
