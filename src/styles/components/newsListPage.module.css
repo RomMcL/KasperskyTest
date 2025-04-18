@@ -1,0 +1,12 @@
+.list {
+    font-size: 1.2rem;
+
+        & li {
+            list-style-type: circle;
+            margin-bottom: 10px;
+            cursor: pointer;
+            &:hover {
+                color: rgb(255, 255, 255);
+            }
+        }
+}
