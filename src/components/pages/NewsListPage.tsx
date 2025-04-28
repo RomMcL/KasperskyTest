@@ -5,6 +5,8 @@ import { useAppDispatch, useAppSelector } from '../../redux-state/store';
 
 import { changeNews } from '../../redux-state/redusers/news';
 
+import { Button } from 'antd';
+
 import styles from '../../styles/components/newsListPage.module.css';
 
 const NewsListPage = () => {
@@ -36,7 +38,13 @@ const NewsListPage = () => {
             )
           })
         }
-      </ul>      
+      </ul>  
+      <h1>Additional Task</h1>  
+      <Button type="primary"
+        onClick={() => navigate('/additional_task')}
+      >
+        Show HighlightedTextarea
+      </Button>  
     </section>
   )
 }

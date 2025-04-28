@@ -1,0 +1,74 @@
+.red {
+    color: red;
+    background-color: transparent;
+}
+
+.blue {
+    color: blue;
+    background-color: transparent;
+}
+
+.yellow {
+    color: yellow;
+    background-color: transparent;
+}
+
+
+.custom_textarea__container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1rem;
+    padding: 12px 16px;
+    border: 1px solid rgb(155,172,186);
+    border-radius: 12px;
+    height: fit-content;
+    min-height: 125px;
+
+        & .textarea__textarea {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            column-gap: 1rem;
+
+                & .textarea__input_field {
+                    width: 660px;
+                    background-color: rgb(155,172,186);
+                    border-radius: 6px;
+                    padding: 6px 10px;
+                    color: black;
+                    font-family: monospace;
+                    font-size: 0.9rem;
+                }
+        
+                & .textarea__btns {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    column-gap: 0.5rem;
+                    width: 3.6rem;
+                }
+        }
+
+        & .textarea__footer {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: right;
+            align-items: center;
+            column-gap: 1rem;
+
+                & div {
+                    flex-grow: 1;
+
+                        & .textarea__message {
+                            font-family: monospace;
+                            font-size: 0.8rem;
+                        }
+                }
+        }
+       
+}

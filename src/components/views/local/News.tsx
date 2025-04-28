@@ -9,7 +9,7 @@ import SubtitleInfo from '../../comps/news-modules/SubtitleInfo';
 import TagsBlock from '../../comps/news-modules/TagsBlock';
 
 import { IData_SnippetNews } from '../../../types/news';
-import styles from '../../../styles/components/newsBlock.module.css'
+import styles from '../../../styles/components/newsBlock.module.css';
 
 
 const News = (props: IData_SnippetNews) => {
