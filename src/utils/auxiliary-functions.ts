@@ -5,12 +5,13 @@ export const keysSearch = (str: string) => {
 
 
 export const keywordSearch = (str: string) => {
-    const parts = str.split(/ (AND|OR|NOT) /);
+    const parts = str.split(/ (AND|OR|NOT) (?=(?:[^"]*"[^"]*")*[^"]*$)/);
 
     const keyWords = parts.map(part => {
         if (!['AND', 'OR', 'NOT'].includes(part)) {
             const firstQuoteIndex = part.indexOf('"');
-            const lastQuoteIndex = part.lastIndexOf('"');
+            let lastQuoteIndex = part.lastIndexOf('"');
+            if (part.charAt(lastQuoteIndex) !== '"') lastQuoteIndex = part.length;            
             const newPart = part.slice(firstQuoteIndex + 1, lastQuoteIndex);                
             return newPart; 
         }

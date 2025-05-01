@@ -43,7 +43,7 @@ const HighlightedTextarea = () => {
                                 className: styles.blue
                             },
                             {
-                                highlight: ['OR', 'AND', 'NOT'],
+                                highlight: [/\bOR\b/g, /\bAND\b/g, /\bNOT\b/g],
                                 className: styles.red
                             }
                         ]}
